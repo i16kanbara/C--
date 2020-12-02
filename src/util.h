@@ -37,7 +37,7 @@
  */
 
 // バッファサイズ等
-#define StrMAX      128        // 文字列、名前の最大長
+#define StrMAX      128                   // 文字列、名前の最大長
 
 // C-- 風に C 言語で記述するための定義
 #define boolean  int
@@ -58,7 +58,6 @@ int isDelim(int ch);                      // 区切り記号かテスト
 int isOdigit(int ch);                     // 8進数字かテスト
 boolean strEndsWith(char *s, char *sfx);  // 文字列最後の一致をテスト
 FILE *eOpen(char *fname, char *mod);      // エラーチェック付きの fopen
-
 #ifdef C
-char getFname();
+char* getFname();                         // エラーメッセージ用ファイル名を記憶
 #endif
